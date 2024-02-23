@@ -102,3 +102,47 @@ footer {
     padding: 1em;
     background-color: #1f1f1f;
 }
+
+
+/* Additional Components CSS */
+
+.profile-sections {
+    margin-top: 2rem;
+}
+
+.profile-sections section {
+    background: #262626; /* Darker background for sections */
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.profile-sections h3 {
+    color: #ddd;
+    margin-bottom: 0.5rem;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    background: #333;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.graph-container {
+    background: #333;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.achievement {
+    background: #333;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+}

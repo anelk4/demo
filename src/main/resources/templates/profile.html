@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+<div id="snow-container"></div>
+
+<header>
+    <nav class="navbar">
+        <!-- Navigation bar content -->
+    </nav>
+</header>
+
+<main>
+    <div class="profile-container profile-grid">
+        <aside class="profile-sidebar">
+            <!-- Sidebar content with profile information -->
+            <div class="profile-image-container">
+                <img src="/img/pro.png" alt="Profile Picture" class="profile-image">
+            </div>
+            <h1>Username</h1>
+            <p>1 follower • 0 following</p>
+            <button class="btn">Edit profile</button>
+        </aside>
+
+        <section class="profile-main">
+            <h2>Popular Repositories</h2>
+            <div class="-list">
+                <!-- Repository items will be listed here -->
+            </div>
+        </section>
+        <div class="profile-sections">
+            <section class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li>Web Development</li>
+                    <!-- More categories -->
+                </ul>
+            </section>
+
+            <section class="ratings">
+                <h3>Ratings</h3>
+                <div class="graph-container">
+                    <canvas id="ratingsGraph"></canvas>
+                </div>
+            </section>
+
+
+
+            <!-- Circular Menu -->
+            <div class="circular-menu">
+                <nav class="circle">
+                    <ul>
+                        <li><a href="#">Категории</a></li>
+                        <li><a href="#">Привычки</a></li>
+                        <li><a href="#">Прогресс привычек</a></li>
+                        <li><a href="#">Достижения</a></li>
+                        <li><a href="#">Группы</a></li>
+                        <li><a href="#">Пользовательские настройки</a></li>
+                        <li><a href="#">События</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p class="text-center">&copy; 2024 Gaming Hub. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+<script src="/js/chart-setup.js" defer></script>
+
+
+</body>
+</html>

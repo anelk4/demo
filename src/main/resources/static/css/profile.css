@@ -1,0 +1,210 @@
+/* General Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #121212; /* Dark background */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 1140px;
+    margin: 2rem auto;
+    padding: 0 15px;
+}
+
+/* Profile Sidebar */
+.profile-sidebar {
+    background: #1c1c1c; /* Darker shade for sidebar */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white glow for depth */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-sidebar h1 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.profile-sidebar p {
+    color: #a9a9a9; /* Lighter text color for contrast */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #0d6efd; /* Bootstrap primary blue */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none; /* Remove default border */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background: #0b5ed7; /* A shade darker on hover */
+}
+
+/* Profile Main */
+.profile-main {
+    background: #1c1c1c; /* Same as sidebar for consistent theming */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.profile-main h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #2c2c2c; /* Subtle border color */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Grid */
+@media (min-width: 700px) {
+    .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2rem;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    padding: 1rem 0;
+    background: #181818; /* Slightly darker background for the footer */
+    color: #a9a9a9; /* Lighter text color for contrast */
+}
+
+
+/* ... (the rest of your existing CSS) ... */
+
+.profile-image-container {
+    /* Optional: you can add styles to the container if needed */
+}
+
+.profile-image {
+    width: 200px; /* Control the size of the image */
+    height: 150px; /* Make sure to set the same width and height for a perfect circle */
+    border-radius: 50%; /* This will make the border round */
+    object-fit: cover; /* This will ensure that the image covers the area without being stretched */
+    border: 3px solid #ffffff; /* Add a border if you like */
+    margin-bottom: 1rem; /* Add some space below the image */
+}
+
+/* Container for the circular menu */
+.circular-menu {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    height: 150vh; /* Высота вьюпорта */
+    margin-right: 85px; /* Отступ справа на 85 пикселей */
+    margin-top: -85px; /* Отступ сверху, чтобы поднять меню на 85 пикселей */
+}
+
+
+.circle {
+    position: relative;
+    width: 450px; /* Or any size you want */
+    height: 550px; /* Or any size you want */
+    list-style: none;
+    transform: translateX(80%); /* Position to the right; adjust as needed */
+}
+
+.circle ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.circle ul li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    margin: -80px; /* Half of width/height */
+    background-color: #333; /* Adjust color as needed */
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-out;
+}
+
+.circle ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px; /* Adjust size as needed */
+    border-radius: 80%;
+}
+
+/* Adjust the placement of each item in the circle */
+.circle ul li:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg) translateX(270px) rotate(0deg); }
+.circle ul li:nth-child(2) { transform: translate(-50%, -50%) rotate(60deg) translateX(270px) rotate(-60deg); }
+.circle ul li:nth-child(3) { transform: translate(-50%, -50%) rotate(120deg) translateX(270px) rotate(-120deg); }
+.circle ul li:nth-child(4) { transform: translate(-50%, -50%) rotate(180deg) translateX(270px) rotate(-180deg); }
+.circle ul li:nth-child(5) { transform: translate(-50%, -50%) rotate(240deg) translateX(270px) rotate(-240deg); }
+.circle ul li:nth-child(6) { transform: translate(-50%, -50%) rotate(300deg) translateX(270px) rotate(-300deg); }
+.circle ul li:nth-child(7) { transform: translate(-50%, -50%) rotate(360deg) translateX(270px) rotate(-360deg); }
+
+/* Hover effect */
+.circle ul li:hover {
+    background-color: #555;
+}
+
+/* Extra styles for better visibility */
+.circle ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+/* js snow
+ */
+
+.snowflake {
+    position: fixed;
+    top: -2em;
+    z-index: 9999;
+    color: #fff;
+    pointer-events: none;
+    user-select: none;
+}

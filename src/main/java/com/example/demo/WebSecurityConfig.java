@@ -1,5 +1,5 @@
 package com.example.demo;
-
+// ожидает базу данных
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,8 +17,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
+                .antMatchers("/css/**", "/js/**", "/img/**").permitAll()
                 .antMatchers("/", "/home", "/register", "/css/styles.css").permitAll() // Разрешить всем доступ к этим страницам
-                .antMatchers("/profile").authenticated() // Требовать аутентификацию для доступа к странице профиля
+                .antMatchers("/login").permitAll() // Permit all for login page
+                .antMatchers("/profile").permitAll() // Permit all for login page
+                //.antMatchers("/profile").authenticated() // Требовать аутентификацию для доступа к странице профиля
                 .anyRequest().authenticated() // Требовать аутентификацию для всех остальных запросов
                 .and()
                 .formLogin()
@@ -39,4 +42,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder noOpPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
+
+// НЕ ТРОГАЙТЕ закомментированные коды
+   // @Bean
+    //public PasswordEncoder passwordEncoder() {
+      //  return new BCryptPasswordEncoder();
+    // }
+  //  @Autowired
+    // private UserDetailsService userDetailsService;
+
+    //@Override
+    // protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    //  auth.userDetailsService(userDetailsService)
+    //        .passwordEncoder(passwordEncoder());
+    //}
+
 }

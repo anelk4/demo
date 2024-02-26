@@ -13,6 +13,11 @@ public class UserController {
         return "index";
     }
 
+    @GetMapping("/About")
+    public String about() {
+        return "About";
+    }
+
   //  @GetMapping("/login")
     //public String showLoginForm() {
       //  return "login";

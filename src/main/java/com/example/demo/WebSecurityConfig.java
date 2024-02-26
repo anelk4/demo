@@ -17,11 +17,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/css/**", "/js/**", "/img/**").permitAll()
-                .antMatchers("/", "/home", "/register", "/css/styles.css").permitAll() // Разрешить всем доступ к этим страницам
-                .antMatchers("/login").permitAll() // Permit all for login page
-                .antMatchers("/profile").permitAll() // Permit all for login page
-                //.antMatchers("/profile").authenticated() // Требовать аутентификацию для доступа к странице профиля
+                .antMatchers("/css/**", "/js/**", "/img/**").permitAll() // Разрешить всем доступ к статическим ресурсам
+                .antMatchers("/", "/home", "/register", "/css/styles.css", "/About").permitAll() // Разрешить всем доступ к этим страницам, включая "/About"
+                .antMatchers("/login").permitAll() // Разрешить всем доступ к странице входа
+                .antMatchers("/profile").permitAll() // Разрешить всем доступ к странице профиля
+                // .antMatchers("/profile").authenticated() // Эта строка закомментирована, так как выше уже есть разрешение для всех на "/profile"
                 .anyRequest().authenticated() // Требовать аутентификацию для всех остальных запросов
                 .and()
                 .formLogin()

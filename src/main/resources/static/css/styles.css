@@ -9,6 +9,11 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation bar */
@@ -16,24 +21,29 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
-    background-color: #1f1f1f;
+    height: 50px;
+    background-color: #292929;
 }
 
 .logo {
-    font-size: 2em;
-    font-weight: bold;
+    flex: 0 1 auto;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     padding: 0.5em 1em;
     transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #4CAF50;
 }
 
 /* Main content sections */
@@ -101,6 +111,9 @@ footer {
     text-align: center;
     padding: 1em;
     background-color: #1f1f1f;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
@@ -118,7 +131,7 @@ footer {
 }
 
 .profile-sections h3 {
-    color: #ddd;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -145,4 +158,51 @@ footer {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     border-radius: 4px;
+}
+
+#character-customization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 100px); /* Высота экрана минус navbar и footer */
+    background-color: #171717; /* Фоновый цвет, соответствующий дизайну */
+}
+
+#character-container {
+    /* Стили для контейнера персонажа */
+    background-color: #4fad44; /* Серый фон за персонажем */
+    border-radius: 50%;
+    width: 500px; /* или подходящий размер */
+    height: 500px; /* или подходящий размер */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#character-container img {
+    width: 100%; /* Подгонка изображения под размер контейнера */
+    height: auto;
+    border-radius: 50%; /* Делаем изображение круглым */
+}
+
+#customization-options {
+    /* Стили для кнопок кастомизации */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#customization-options button {
+    background-color: #ffffff; /* Цвет фона кнопок */
+    border: none;
+    border-radius: 20px; /* Скругленные углы */
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#customization-options button:hover {
+    background-color: #ffffff; /* Цвет при наведении */
 }

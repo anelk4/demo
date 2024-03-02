@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,19 +18,20 @@ public class UserController {
         return "About";
     }
 
+    @GetMapping("/Admin")
+    public String admin() {
+        return "Admin";
+    }
+
   //  @GetMapping("/login")
     //public String showLoginForm() {
       //  return "login";
     //}
-    @GetMapping("login")
-  public String login() {
-      return "login";
-  }
 
-    @GetMapping("/profile")
-    public String profile() {
-        return "profile"; // This should match the name of your HTML file without the extension.
-    }
+ //@GetMapping("/profile")
+   // public String userProfile() {
+     //  return "profile"; // имя HTML файла для страницы профиля пользователя
+  //}
 
     // Добавьте методы для обработки остальной логики приложения
 }

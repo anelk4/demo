@@ -13,15 +13,13 @@ public class RegisterController {
     private AccountService accountService;
 
     @GetMapping("/register")
-    public String getRegistrationForm() {
+    public String getRegisterForm() {
         return "register";
     }
 
-
     @PostMapping("/register")
-    public String registerAccount(@ModelAttribute Account account) {
-        accountService.registerNewAccount(account);
-        return "redirect:/login"; // Перенаправление на страницу входа после регистрации
+    public String registerNewUser(Account account) {
+        accountService.save(account);
+        return "redirect:/login"; // Redirecting to login page after registration
     }
-
 }

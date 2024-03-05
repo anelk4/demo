@@ -9,15 +9,12 @@
 <body>
 <div class="form-container">
     <h2>Вход</h2>
-    <!-- Обратите внимание на изменение поля email на username -->
     <form action="/login" method="post">
-        <input type="text" placeholder="Имя пользователя или электронная почта" name="username" required>
+        <input type="email" placeholder="Электронная почта" name="email" required>
         <input type="password" placeholder="Пароль" name="password" required>
-        <!-- Важно добавить CSRF токен в форму для защиты -->
-        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <button type="submit">Войти</button>
     </form>
-    <button onclick="window.location.href='/register';">Регистрация</button>
+    <button onclick="window.location.href='/register';" class="btn btn-secondary">Регистрация</button>
 </div>
 </body>
 </html>
